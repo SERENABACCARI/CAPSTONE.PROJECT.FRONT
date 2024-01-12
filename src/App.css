@@ -30,8 +30,18 @@
   
   
 }
+/*css carousel testo spostato a destra delle immagini*/
 
+.content {
+  display: flex;
+  align-items: center;
+}
 
+.text {
+  flex: 1;
+  padding: 20px;
+  color: white;
+}
 
 .foto{
   height: 110vmin;   /*foto home*/

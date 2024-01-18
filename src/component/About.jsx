@@ -32,7 +32,7 @@ class About extends React.Component {
                                         {card.text}
                                     </Card.Text>
                                     {/* Utilizzo to per creare un collegamento alla pagina "Contact" */}
-                                    <Link to="/Contact">
+                                    <Link to="/Login">
                                         <Button className='Button'>ISCRIVITI</Button>
                                     </Link>
                                 </Card.Body>

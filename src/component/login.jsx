@@ -1,66 +1,54 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {
+    MDBContainer,
+    MDBInput,
+    MDBCheckbox,
+    MDBBtn,
+    MDBIcon
+}
+    from 'mdb-react-ui-kit';
 
-function Registration() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-
-    const handleUsernameChange = (e) => {
-        setUsername(e.target.value);
-    };
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
-
-    const handleConfirmPasswordChange = (e) => {
-        setConfirmPassword(e.target.value);
-    };
-
-    const handleRegistration = () => {
-        // Implement your registration logic here
-        // You can send a request to your backend for registration
-        // Validate input, check if passwords match, etc.
-        console.log('Registration data:', { username, password, confirmPassword });
-    };
-
+function App() {
     return (
-        <div>
-                <h1>Benvenuto!!!</h1>
-                <h1>Sei un nuov utente?effettua la registrazione!</h1>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-6'>
-                        <label>Username:</label>
-                        <input type="text" value={username} onChange={handleUsernameChange} />
-                    </div>
-                </div>
+            <div>
+                <h1 className='Login'>Login</h1>
+        <MDBContainer className="p-4 my-5 ">
+            <MDBInput label='Email address' id='form1' type='email' />
+            <MDBInput wrapperClass='mb-2' label='Password' id='form2' type='password' />
 
-                <div className='row'>
-                    <div className='col-6'>
-                        <label>Password:</label>
-                        <input type="password" value={password} onChange={handlePasswordChange} />
-                    </div>
-                </div>
+            <div className="d-flex justify-content-between mx-3 mb-4">
+                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
+                <a href="!#">Forgot password?</a>
+            </div>
 
-                <div className='row'>
-                    <div className='col-6'>
-                        <label>Confirm Password:</label>
-                        <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
-                    </div>
-                </div>
+            <MDBBtn className="">Sign in</MDBBtn>
 
-                <div className='row'>
-                    <div className='col-6'>
-                        <button onClick={handleRegistration}>Register</button>
-                    </div>
-                    
+            <div className="text-center">
+                <p>Not a member? <a href="#!">Register</a></p>
+                <p>or sign up with:</p>
+
+                <div className='d-flex justify-content-between mx-auto' style={{ width: '40%' }}>
+                    <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                        <MDBIcon fab icon='facebook-f' size="sm" />
+                    </MDBBtn>
+
+                    <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                        <MDBIcon fab icon='twitter' size="sm" />
+                    </MDBBtn>
+
+                    <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                        <MDBIcon fab icon='google' size="sm" />
+                    </MDBBtn>
+
+                    <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
+                        <MDBIcon fab icon='github' size="sm" />
+                    </MDBBtn>
+
                 </div>
             </div>
-        </div>
+
+            </MDBContainer></div>
     );
 }
 
-export default Registration;
-
-
+export default App;

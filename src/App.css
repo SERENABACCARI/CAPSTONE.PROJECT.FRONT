@@ -1,3 +1,13 @@
+/*INDEX HTML*/
+
+#body{
+  background-color: black;
+}
+
+#root {
+  background-color: black;
+}
+
 /*PAGINA HOME*/
 
 
@@ -8,6 +18,7 @@
 }
 
 .navbar-style{
+  height: 10rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -20,7 +31,7 @@
 
 
 .logo {
-  height: 8vmin;              /*logo navbar*/
+  height: 10vmin;              /*logo navbar*/
   pointer-events: none;
 }
 
@@ -56,41 +67,19 @@
   height: 110vmin;     /*foto home*/
 
 }
-.App-header {
-  background-color: #070707;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #e461fb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 /* Aggiungi questo stile PAGINA CONTACT */
 
 .contact-title{
-  margin-top: 6rem ;
+  margin-top: 15rem ;
   font-family: cursive;
   color: white;
 }
 
 .contact {
-  margin-top: 6rem;
+  margin-top: 15rem;
   font-family: cursive;
   max-width: 600px;
   margin: auto;
@@ -149,7 +138,7 @@ p {
 
 
 .container{
-  margin-top: 5rem;
+  margin-top: 15rem;
   margin-bottom: 5rem; 
   
       
@@ -178,8 +167,25 @@ p {
 /*css footer*/
 
 .footer{
-  background-color: #0a0a0a;
+  margin-top: 15rem;
   color: white;
   text-align: center;
   
+
+  
+}
+
+/*PAGINA LOGIN*/
+
+.Login{
+  color: white;
+  font-family: coursiver;
+  margin-top: 15rem;
+  background-color: rgb(1, 0, 0);
+}
+
+.containerLogin{
+ 
+  margin-top: 5rem;
+  text-align: center;
 }

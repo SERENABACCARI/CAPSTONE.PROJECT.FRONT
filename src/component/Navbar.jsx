@@ -11,10 +11,10 @@ const Navbar = () => {
       </BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link style={{ color: 'white' }}  href="/">Home</Nav.Link >
-          <Nav.Link style={{ color: 'white' }} href="/About">Gare ed Eventi</Nav.Link>
-          <Nav.Link style={{ color: 'white' }} href="/Contact">Contact</Nav.Link>
+        <Nav className=   "ml-auto">
+          <Nav.Link style={{ color: 'white',fontFamily:"cursive", }}  href="/">Home</Nav.Link >
+          <Nav.Link style={{ color: 'white', fontFamily: "cursive" }} href="/About">Gare ed Eventi</Nav.Link>
+          <Nav.Link style={{ color: 'white', fontFamily: "cursive" }} href="/Contact">Contact</Nav.Link>
         </Nav>
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>

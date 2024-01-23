@@ -15,35 +15,37 @@ function Home() {
                         </div>
                         <Carousel.Caption>
                             <div className="text">
-                            <h1 style={{ color: 'white' }}>Benvenuto!</h1>
-                            <p>Un sogno che diventa un progetto.</p>
-                        </div></Carousel.Caption>
+                                <h1 style={{ color: 'white' }}>Benvenuto!</h1>
+                                <p>Un sogno che diventa un progetto.</p>
+                            </div>
+                        </Carousel.Caption>
                     </Container>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Container>
                         <div className="content">
-                            <div className="text">
-                                <h1 style={{ color: 'white' }}>NaturalBodyBuilding</h1>
-                                <p>è miglioramento fisico e prestazionale ottenuto attraverso lo studio, la dedizione, la pazienza e la programmazione allenante rispettando
-                                    la natura fisiologica dell’essere umano SENZA l’uso di sostanze che ne amplifichino le potenzialità..</p>
-                            </div>
                             <img className="foto2" src={logo} alt="Second slide" />
+                            <Carousel.Caption>
+                                <div className="text">
+                                    <h1 style={{ color: 'white' }}>NaturalBodyBuilding</h1>
+                                    <p>È miglioramento fisico e prestazionale ottenuto attraverso lo studio, la dedizione, la pazienza e la programmazione allenante rispettando
+                                        la natura fisiologica dell’essere umano SENZA l’uso di sostanze che ne amplifichino le potenzialità.</p>
+                                </div>
+                            </Carousel.Caption>
                         </div>
-                        <Carousel.Caption></Carousel.Caption>
                     </Container>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Container>
                         <div className="content">
-                            <div className="text">
-                                <h1 style={{ color: 'white' }}>Unisciti Noi</h1>
-                                <p>Se sei un appassionato e ti piacebbe Portare cio' che fai sul palco
-                                    ti aspettiamo a uno dei nostri Eventi.</p>
-                            </div>
                             <img className="foto3" src={logo3} alt="Third slide" />
+                            <Carousel.Caption>
+                                <div className="text">
+                                    <h1 style={{ color: 'white' }}>Unisciti Noi</h1>
+                                    <p>Se sei un appassionato e ti piace portare ciò che fai sul palco, ti aspettiamo a uno dei nostri eventi.</p>
+                                </div>
+                            </Carousel.Caption>
                         </div>
-                        <Carousel.Caption></Carousel.Caption>
                     </Container>
                 </Carousel.Item>
             </Carousel>
@@ -52,4 +54,3 @@ function Home() {
 }
 
 export default Home;
-

@@ -18,7 +18,7 @@
 }
 
 .navbar-style{
-  height: 10rem;
+  
   position: fixed;
   top: 0;
   right: 0;
@@ -31,7 +31,7 @@
 
 
 .logo {
-  height: 10vmin;              /*logo navbar*/
+  height: 8vmin;              /*logo navbar*/
   pointer-events: none;
 }
 

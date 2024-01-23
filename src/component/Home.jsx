@@ -11,13 +11,13 @@ function Home() {
                 <Carousel.Item>
                     <Container>
                         <div className="content">
-                            <div className="text">
-                                <h1 style={{ color: 'white' }}>Benvenuto!</h1>
-                                <p>Un sogno che diventa un progetto.</p>
-                            </div>
                             <img className="foto" src={logo2} alt="First slide" />
                         </div>
-                        <Carousel.Caption></Carousel.Caption>
+                        <Carousel.Caption>
+                            <div className="text">
+                            <h1 style={{ color: 'white' }}>Benvenuto!</h1>
+                            <p>Un sogno che diventa un progetto.</p>
+                        </div></Carousel.Caption>
                     </Container>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,3 +52,4 @@ function Home() {
 }
 
 export default Home;
+

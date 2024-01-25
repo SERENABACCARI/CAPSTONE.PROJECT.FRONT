@@ -1,56 +1,63 @@
-import React from 'react';
-import {Button} from "react-bootstrap"
-import {
-    MDBContainer,
-    MDBInput,
-    MDBCheckbox,
-    MDBBtn,
-    MDBIcon
-    
-} from 'mdb-react-ui-kit';
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
 
-function App() {
+function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            // Esegui la richiesta HTTP con fetch
+            const response = await fetch('http://localhost:3020/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            if (!response.ok) {
+                //  in caso di errore
+                console.error('Errore durante la richiesta:', response.status);
+                return;
+            }
+
+            //  richiesta  andata a buon fine
+            const data = await response.json();
+
+            if (data.token) {
+                // Correggi la chiave di localStorage (rimuovi i due punti)
+                localStorage.setItem('userid', data.token);
+                localStorage.setItem('token', data.token);
+
+                // Puoi eseguire altre azioni qui, ad esempio, reindirizzare l'utente
+            }
+
+        } catch (error) {
+            // Gestisci gli errori durante la richiesta
+            console.error('Errore durante la richiesta:', error.message);
+        }
+    };
+
     return (
-        <div className="d-flex align-items-center justify-content-center min-vh-100">
-            <MDBContainer className="p-4" style={{ maxWidth: '400px' }}>
-                <h1 className='Login mb-4'>Login</h1>
-                <MDBInput label='Email address' id='form1' type='email' />
-                <MDBInput wrapperClass='mb-2' label='Password' id='form2' type='password' />
-
-                <div className="d-flex justify-content-between mx-3 mb-4">
-                    <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
-                    <a href="!#">Forgot password?</a>
-                </div>
-
-                <Button variant="primary" type="submit" className='Button'>
-                    Sign in
+        <div className="login-container">
+            <Form className="login" onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formGroupEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Login
                 </Button>
-
-                <div className="text-center mt-3">
-                    <p>Not a member? <a href="#!">Register</a></p>
-                    <p>or sign up with:</p>
-
-                    <div className='d-flex justify-content-between mx-auto' style={{ width: '40%' }}>
-                        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                            <MDBIcon fab icon='facebook-f' size="sm" />
-                        </MDBBtn>
-
-                        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                            <MDBIcon fab icon='twitter' size="sm" />
-                        </MDBBtn>
-
-                        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                            <MDBIcon fab icon='google' size="sm" />
-                        </MDBBtn>
-
-                        <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-                            <MDBIcon fab icon='github' size="sm" />
-                        </MDBBtn>
-                    </div>
-                </div>
-            </MDBContainer>
+            </Form>
         </div>
     );
 }
 
-export default App;
+export default Login;

@@ -62,73 +62,82 @@
 
 /* Aggiungi questo stile PAGINA CONTACT */
 
-.contact-title{
-  margin-top: 15rem ;
-  font-family: cursive;
-  color: white;
-}
 
-.contact {
+.contatti{
   margin-top: 15rem;
-  font-family: cursive;
-  max-width: 600px;
-  margin: auto;
+}
+.container {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+.contact-form {
+  margin: 20px auto;
+  max-width: 400px;
+  
 }
 
-Form {
+.contact {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.containercontact {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-Form.Group {
-  margin-bottom: 20px;
+.contact-form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-Form.Label {
-  font-weight: bold;
+label {
+  display: block;
   margin-bottom: 8px;
 }
 
-Form.Control {
+input {
   width: 100%;
   padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
 }
 
-Button {
-  background-color: #9b0b80;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-Button:hover {
-  background-color: #b30000;
+button:hover {
+  background-color: #45a049;
 }
 
-/* Aggiungi stile per il messaggio di conferma */
-p {
-  margin-top: 10px;
-  font-size: 16px;
-}
 
 /*css pagina gallery card Gare ed Eventi*/
 
 
 
 .container{
-  margin-top: 15rem;
+  margin-top: ;
   margin-bottom: 5rem; 
   
       
@@ -142,7 +151,7 @@ p {
 .Gare{
   margin-top: 6rem;
   margin-bottom: 3rem;   /*titolo gare ed eventi*/
-  font-family: ;
+  
   color: white;
 }
 
@@ -160,15 +169,16 @@ p {
 
 /*PAGINA LOGIN*/
 
-.Login{
-  color: white;
-  font-family: coursiver;
-  margin-top: 15rem;
-  background-color: rgb(1, 0, 0);
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
 }
 
-.containerLogin{
- 
-  margin-top: 5rem;
-  text-align: center;
+
+Button {
+  margin-top: 10px;
+  
 }

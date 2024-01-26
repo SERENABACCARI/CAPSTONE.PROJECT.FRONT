@@ -19,17 +19,17 @@ class About extends React.Component {
     render() {
         return (
             <div className="About">
-                <div className='container'>
+                <div className='containerGare'>
                     <h1 className='Gare'>Gare ed Eventi</h1>
                     <div className='row'>
                         {this.state.cards.map((card) => (
                             <div key={card.id} className="col-12 mb-4">
                                 <Card style={{backgroundColor:"black"}}>
                                     <div className="row" style={{backgroundColor:"black"}}>
-                                        <div className="col-6">
-                                            <Card.Img src={card.image} alt="" />
+                                        <div className="col-md-6">
+                                            <Card.Img className='cardimage' src={card.image} alt="" />
                                         </div>
-                                        <div className="col-6">
+                                        <div className="col-md-6">
                                             <Card.Body>
                                                 <Card.Title style={{ color: 'white', fontFamily: "" }}>{card.title}</Card.Title>
                                                 <Card.Text style={{ color: 'white', fontFamily: "" }}>

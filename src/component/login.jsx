@@ -42,15 +42,15 @@ function Login() {
     };
 
     return (
-        <div className="login-container">
+        <div className="login-container" >
             <Form className="login" onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formGroupEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Form.Group  className="mb-3" controlId="formGroupEmail">
+                    
+                    <Form.Control  type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    
+                    <Form.Control  type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Login

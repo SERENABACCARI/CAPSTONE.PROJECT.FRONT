@@ -37,25 +37,28 @@
 }
 
 
+
 .Home{
   background-color: black;
-  
+  text-align: center;
+  display: inline-block;
   
 }
 
+/*CSS HOME*/
 
 .foto{
-  height: 110vmin;   /*foto home*/
-  
+  height: 80vmin;   /*foto home*/
+  display: inline-block;
 }
 
 .foto2 {
-  height: 110vmin;   /*foto home*/
-
+  height: 80vmin;   /*foto home*/
+display: inline-block;
 }
 .foto3 {
-  height: 110vmin;     /*foto home*/
-
+  height: 80vmin;     /*foto home*/
+display: inline-block;
 }
 
 
@@ -136,11 +139,10 @@ button:hover {
 
 
 
-.container{
-  margin-top: ;
-  margin-bottom: 5rem; 
-  
-      
+.containerGare{
+  display: flex;
+    flex-direction: column;
+   padding: 150px;
 }
 
 .Button{
@@ -151,10 +153,13 @@ button:hover {
 .Gare{
   margin-top: 6rem;
   margin-bottom: 3rem;   /*titolo gare ed eventi*/
-  
   color: white;
 }
 
+
+.cardimage{
+  width: 40%;
+}
 
 /*css footer*/
 
@@ -182,3 +187,4 @@ Button {
   margin-top: 10px;
   
 }
+

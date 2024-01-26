@@ -11,7 +11,7 @@ function Home() {
                 <Carousel.Item>
                     <Container>
                         <div className="content">
-                            <img className="foto" src={logo2} alt="First slide" />
+                            <img className="foto" src={logo3} alt="First slide" />
                         </div>
                         <Carousel.Caption>
                             <div className="text">
@@ -38,7 +38,7 @@ function Home() {
                 <Carousel.Item>
                     <Container>
                         <div className="content">
-                            <img className="foto3" src={logo3} alt="Third slide" />
+                            <img className="foto3" src={logo2} alt="Third slide" />
                             <Carousel.Caption>
                                 <div className="text">
                                     <h1 style={{ color: 'white' }}>Unisciti Noi</h1>

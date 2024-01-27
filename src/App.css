@@ -12,10 +12,18 @@
 /*PAGINA HOME*/
 
 
+.Home{
+  background-color: black;
+  text-align: center;
+  display: inline-block;
+  
+
+}
 .App {
   text-align: center;
   background-color: #070707;
   color: white;
+  
 }
 
 .navbar-style{
@@ -24,12 +32,18 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1000;
   
   
 }
 
-
+/* Media query per schermi con larghezza massima di 768px (modalità mobile) */
+@media (max-width: 768px) {
+  .navbar-style {
+    background-color: rgb(32, 30, 30);
+    /* applico solo per schermi più piccoli */
+  }
+}
 
 .logo {
   height: 8vmin;              /*logo navbar*/
@@ -38,18 +52,13 @@
 
 
 
-.Home{
-  background-color: black;
-  text-align: center;
-  display: inline-block;
-  
-}
 
-/*CSS HOME*/
+/*FOTO CAROSELLO HOME*/
 
 .foto{
   height: 80vmin;   /*foto home*/
   display: inline-block;
+  
 }
 
 .foto2 {
@@ -62,7 +71,6 @@ display: inline-block;
 }
 
 
-
 /* Aggiungi questo stile PAGINA CONTACT */
 
 
@@ -73,7 +81,7 @@ display: inline-block;
  
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+ 
   padding: 20px;
 }
 
@@ -160,6 +168,15 @@ button:hover {
 .cardimage{
   width: 40%;
 }
+
+
+/*@media (max-width: 768px) {
+
+  /*.cardimage {
+    width: 100%;
+    
+  }*/
+/*}*/
 
 /*css footer*/
 

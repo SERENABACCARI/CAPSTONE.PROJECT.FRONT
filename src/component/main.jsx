@@ -1,51 +1,39 @@
-import React, { useEffect } from 'react';
-import Login from './login'; // Assicurati di importare il componente Login dal percorso corretto
 
-function App() {
-    useEffect(() => {
-        const fetchDataAndSaveToLocalStorage = async () => {
-            try {
-                // Eseguo la richiesta HTTP con fetch
-                const response = await fetch(`http://localhost:3020/api/users/${userid}`, {
-                    method: 'POST',
-                    headers: {
-                        Authorization: `Bearer ${token} ` 
-                    },
-                    body: JSON.stringify({ }),
-                });
+import  { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-                if (!response.ok) {
-                    
-                    console.error('Errore durante la richiesta:', response.status);
-                    return;
-                }
+export default function main(){
+    const [user, setUser] = useEffect;
+    const Navigate= useNavigate()
 
-               
-                const data = await response.json();
+    useEffect(() =>{
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem("token");
+        if(!userId || !token){
 
-                if (data.token) {
-                    // Salvo i dati nel localStorage
-                    localStorage.setItem('userid', data.token);
-                    localStorage.setItem('token', data.token);
+            Navigate("/login");
+        }
 
-                   
-                }
+        fetch(`http://localhost:3020/api/users ${userId}`,
+        {
+            headers: {
+                'Authorization': `Bearer  + ${token}`},
+            }).then(user => {
+                setUser(user);
 
-            } catch (error) {
-                
-                console.error('Errore durante la richiesta:', error.message);
-            }
-        };
+        })
+        .catch(()=>{
+            Navigate("/login");
+        })
+ },[]);
 
-        fetchDataAndSaveToLocalStorage(); 
-    }, []); 
+return !user ?(
+    <span>LOADING....</span>
+):(
 
-    return (
-        <div>
-            
-            <Login />
-        </div>
-    );
+<div>congratulazioni!accesso avvenuto con successo{user}</div>
+
+)
+
+
 }
-
-export default App;

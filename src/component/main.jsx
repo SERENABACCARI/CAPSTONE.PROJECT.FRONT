@@ -33,6 +33,6 @@ export default function Main() {
         
         <span>LOADING....</span>
     ) : (
-        <div style={{color:"white"}}>Congratulations! Accesso avvenuto con successo {user.email}</div>
+            <div style={{  marginTop: "20rem" }}><h1>Congratulazioni! Accesso avvenuto con successo!</h1> {user.email}</div>
     );
 }

@@ -14,13 +14,12 @@ const Navbar = () => {
       <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link style={{ color: 'white' }} href="/">Home</Nav.Link>
-          <Nav.Link style={{ color: 'white' }} href="/About">Gare ed Eventi</Nav.Link>
-          <Nav.Link style={{ color: 'white' }} href="/Contact">Contact</Nav.Link>
+          <Nav.Link style={{  }} href="/">Home</Nav.Link>
+          <Nav.Link style={{  }} href="/About">Gare ed Eventi</Nav.Link>
+          <Nav.Link style={{  }} href="/Contact">Contact</Nav.Link>
+          <Nav.Link style={{ }} href="/login">Login</Nav.Link>
         </Nav>
-        <div className='containerlogin'>
-          <Nav.Link style={{ color: 'white'}} href="/login">Login</Nav.Link>
-        </div>
+        
 
       </BootstrapNavbar.Collapse>
     </BootstrapNavbar>

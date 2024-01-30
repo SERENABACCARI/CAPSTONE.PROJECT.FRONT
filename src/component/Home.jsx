@@ -4,11 +4,12 @@ import logo from '../immagini/DSC_7170.jpg';
 import logo2 from '../immagini/L.JPG';
 import logo3 from '../immagini/VR-1610.jpg';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function Home() {
     return (
         <div className="Home">
-            <Carousel style={{ marginTop: '5rem' }}>
+            <Carousel style={{ marginTop: '10rem' }}>
                 <Carousel.Item>
                     <Container>
                         <div className="content">
@@ -73,9 +74,12 @@ function Home() {
                 <div className='prova2'>
                     <div className='row'>
                         <div className='row'>
-                            <Link to="/about"><h1>Unisciti a Noi!</h1></Link>
+                            <h1>Unisciti a Noi!</h1>
                             <p>Se sei un appassionato e ti piace portare ciò che fai sul palco, ti aspettiamo a uno dei nostri eventi.</p>
                         </div>
+                            <Link to={"/about"}>
+                            <Button className='Button' variant="outline-danger" >Unisciti a noi</Button>
+                            </Link>
                     </div>
                 </div>
             </Container>

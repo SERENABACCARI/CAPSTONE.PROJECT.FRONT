@@ -4,7 +4,7 @@ import React from 'react';
 const ContactsPage = () => {
     return (
         <div className="contacts-page">
-            <h2 className='contatti'>Contatti</h2>
+            <h1 className='contatti'>Contatti</h1>
             <div className='containercontact'>
                 <div className="contacts-list">
                     <div className="contact">
@@ -12,7 +12,7 @@ const ContactsPage = () => {
                         <a href='https://www.BodyBuildingFederationNatural.com/'>www.BodyBuildingFederationNatural.com </a>
                         <p>Phone: +69-000-000</p>
                     </div>
-                    <h2 className='seguici'>Seguici su:</h2>
+                    <h1 className='seguici'>Seguici su:</h1>
                     
                     <div className='container-icon-contact ' style={{display:"flex",justifyContent:"space-around"}}>
                      

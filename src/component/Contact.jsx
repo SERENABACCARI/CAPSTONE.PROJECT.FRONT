@@ -4,8 +4,8 @@ import React from 'react';
 const ContactsPage = () => {
     return (
         <div className="contacts-page">
-            <h1 className='contatti'>Contatti</h1>
-            <div className='containercontact'>
+            <h1 className='contatti'>Contact</h1>
+             <div className='containercontact'>
                 <div className="contacts-list">
                     <div className="contact">
                         <p>Location: asd bbfn Via Roma 8 </p>

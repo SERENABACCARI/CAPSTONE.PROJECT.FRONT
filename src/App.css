@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-style {
-  background-color: rgb(82, 77, 77);
+  background-color: rgb(77, 73, 73);
   position: fixed;
   top: 0;
   right: 0;
@@ -54,6 +54,7 @@ body {
   height: 8vmin;
   /*logo navbar*/
   pointer-events: none;
+  margin-left: 3rem;
 }
 
 
@@ -165,12 +166,11 @@ p{
 
 
 
-.Gare {
+.Gare {/*titolo gare ed eventi*/
   
   margin-bottom: 6rem;
-  /*titolo gare ed eventi*/
   font-family: 'Playfair Display', serif;
-  color: white;
+  color: rgb(220, 210, 210);
 }
 
 

@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+
 /*INDEX HTML*/
 
-#body{
+#body {
   background-color: black;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 #root {
@@ -12,41 +15,43 @@
 /*PAGINA HOME*/
 
 
-.Home{
+.Home {
   background-color: black;
   text-align: center;
   display: inline-block;
-  
+
 
 }
+
 .App {
   text-align: center;
   background-color: #070707;
   color: white;
-  
+
 }
 
-.navbar-style{
-  
+.navbar-style {
+
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1000;
-  
-  
+  font-family: 'Playfair Display', serif;
+
 }
 
-/* Media query per schermi con larghezza massima di 768px (modalità mobile) */
+/* Media query per NAV BAR schermi con larghezza massima di 768px (modalità mobile) */
 @media (max-width: 768px) {
   .navbar-style {
-    background-color: rgb(32, 30, 30);
+    background-color: rgb(46, 44, 44);
     /* applico solo per schermi più piccoli */
   }
 }
 
 .logo {
-  height: 8vmin;              /*logo navbar*/
+  height: 8vmin;
+  /*logo navbar*/
   pointer-events: none;
 }
 
@@ -55,40 +60,51 @@
 
 /*FOTO CAROSELLO HOME*/
 
-.foto{
-  height: 80vmin;   /*foto home*/
+.foto {
+  height: 80vmin;
+  /*foto home*/
   display: inline-block;
-  
+
 }
 
 .foto2 {
-  height: 80vmin;   /*foto home*/
-display: inline-block;
+  height: 80vmin;
+  /*foto home*/
+  display: inline-block;
 }
+
 .foto3 {
-  height: 80vmin;     /*foto home*/
-display: inline-block;
+  height: 80vmin;
+  /*foto home*/
+  display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .foto {
+    height: 50vmin;
+    /* applico solo per schermi più piccoli */
+  }
+}
 
-/* Aggiungi questo stile PAGINA CONTACT */
+/* PAGINA CONTACT */
 
 
-.contatti{
+.contatti {
   margin-top: 15rem;
 }
+
 .container {
- 
+
   display: flex;
   flex-direction: column;
- 
+
   padding: 20px;
 }
 
 .contact-form {
   margin: 20px auto;
   max-width: 400px;
-  
+
 }
 
 .contact {
@@ -98,6 +114,7 @@ display: inline-block;
 }
 
 .contacts-list {
+  margin-top: 15rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
@@ -107,7 +124,7 @@ display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 30vh;
 }
 
 .contact-form {
@@ -117,91 +134,80 @@ display: inline-block;
   border-radius: 5px;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-}
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
 
 
 /*css pagina gallery card Gare ed Eventi*/
 
 
 
-.containerGare{
+.containerGare {
   display: flex;
-    flex-direction: column;
-   padding: 150px;
+  flex-direction: column;
+  padding: 150px;
 }
 
-.Button{
-  background-color: #0e0e0d;     /*BUTTON CARD*/
+.Button {
+  background-color: #0e0e0d;
+  border-color: red
+    /*BUTTON CARD*/
 }
 
 
-.Gare{
-  margin-top: 6rem;
-  margin-bottom: 3rem;   /*titolo gare ed eventi*/
+.Gare {
+
+  margin-bottom: 6rem;
+  /*titolo gare ed eventi*/
   color: white;
 }
 
 
-.cardimage{
+.cardimage {
   width: 40%;
+
+}
+
+.cardimage:hover {
+  filter: brightness(80%);
+
+}
+
+.cardimage:hover p {
+  color: red;
 }
 
 
-/*@media (max-width: 768px) {
 
-  /*.cardimage {
-    width: 100%;
-    
-  }*/
-/*}*/
 
 /*css footer*/
 
-.footer{
+.footer {
   margin-top: 15rem;
   color: white;
   text-align: center;
-  
 
-  
+
+
 }
 
 /*PAGINA LOGIN*/
+
+.login-title {
+  margin-top: 10rem;
+}
+
+
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  
+  height: 30vh;
+
 }
 
 
-Button {
-  margin-top: 10px;
-  
+.Button:hover {
+  background-color:
+    red
 }
-

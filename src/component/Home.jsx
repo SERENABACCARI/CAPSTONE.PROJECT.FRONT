@@ -46,8 +46,10 @@ function Home() {
                 <div className='prova2'>
                     <div className='row'>
                         <div className='row'>
-                            <h1>Benvenuto!</h1>
+                            <h1>Benvenuto in BBFN!</h1>
                             <p>Un sogno che diventa un progetto.</p>
+                            <p>
+                               BBFN è un’associazione sportiva dilettantistica che si propone di organizzare eventi, competizioni, corsi e seminari per promuovere e condividere con tutti i suoi associati la cultura fisica come stile di vita e senza uso di sostanze dopanti.</p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +73,7 @@ function Home() {
                 <div className='prova2'>
                     <div className='row'>
                         <div className='row'>
-                            <Link to="/About"><h1>Unisciti a Noi!</h1></Link>
+                            <Link to="/about"><h1>Unisciti a Noi!</h1></Link>
                             <p>Se sei un appassionato e ti piace portare ciò che fai sul palco, ti aspettiamo a uno dei nostri eventi.</p>
                         </div>
                     </div>

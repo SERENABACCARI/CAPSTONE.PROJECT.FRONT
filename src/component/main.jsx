@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Main() {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
@@ -29,8 +30,9 @@ export default function Main() {
     }, [navigate]);
 
     return !user ? (
+        
         <span>LOADING....</span>
     ) : (
-        <div style={{color:"white"}}>Congratulations! Accesso avvenuto con successo {user}</div>
+        <div style={{color:"white"}}>Congratulations! Accesso avvenuto con successo {user.email}</div>
     );
 }

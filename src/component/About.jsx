@@ -26,16 +26,16 @@ class About extends React.Component {
                             <div key={card.id} className="col-12 mb-4">
                                 <Card style={{backgroundColor:"black"}}>
                                     <div className="row" style={{backgroundColor:"black"}}>
-                                        <div className="col-md-6">
+                                        <div className="col-md-6 ">
                                             <Card.Img className='cardimage' src={card.image} alt="" />
                                         </div>
-                                        <div className="col-md-6">
+                                        <div className="col-md-6 ">
                                             <Card.Body>
                                                 <Card.Title style={{ color: 'white', fontFamily: "" }}>{card.title}</Card.Title>
                                                 <Card.Text style={{ color: 'white', fontFamily: "" }}>
                                                     {card.text}
                                                 </Card.Text>
-                                                <Link to="/Login">
+                                                <Link to="/Regolamento">
                                                     <Button className='Button' style={{ fontFamily: "" }} >Iscriviti</Button>
                                                 </Link>
                                             </Card.Body>

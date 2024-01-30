@@ -27,11 +27,13 @@ function Login() {
             localStorage.setItem('token', data.token);
         }
 
-        navigate('/');
+        navigate('/main');
     };
 
     return (
+           <div><h2 className='login-title'>Login</h2>
         <div className="login-container">
+           
             <Form className="login" onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
                     <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -40,12 +42,13 @@ function Login() {
                     <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
                 
-                <Button variant="primary" type="submit">
+                    <Button className='Button' type="submit">
                     Login
                 </Button>
                 
 
             </Form>
+           </div>
         </div>
     );
 }

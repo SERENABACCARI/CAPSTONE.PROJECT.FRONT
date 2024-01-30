@@ -9,6 +9,8 @@ import Login from '../src/component/login.jsx'
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from '../src/component/footer.jsx';
+import Regolamento from '../src/component/Regolamento.jsx';
+import Main from '../src/component/main.jsx';
 /*import express from "express";
 
 const server = express();
@@ -31,8 +33,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/main" element={<main />} />
-
+            <Route path="/main" element={<Main />} />
+            <Route path="/Regolamento" element={<Regolamento />} />
           </Routes>
         </div>
           <Footer></Footer>

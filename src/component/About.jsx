@@ -22,22 +22,24 @@ class About extends React.Component {
                 <div className='containerGare'>
                     <h1 className='Gare'>Competitions and Events</h1>
 
-                    <div className='row' >
+                    <div className='row'>
                         {this.state.cards.map((card) => (
-                            <div key={card.id} className="col-12 mb-12">
-                                <Card style={{backgroundColor:"transparent", borderColor:"transparent" }}>
-                                    <div className="row" style={{ marginBottom:"3rem"}}>
-                                        <div className="col-6 ">
+                            <div key={card.id} className="col-12">
+                                <Card style={{ backgroundColor: "transparent", borderColor: "transparent" }}>
+                                    <div className="row" style={{ marginBottom: "3rem" }}>
+                                        <div className="col-12 col-md-6">
+                                            {/* Immagine */}
                                             <Card.Img className='cardimage' src={card.image} alt="" />
                                         </div>
-                                        <div className="col-6 ">
+                                        <div className="col-12 col-md-6">
+                                            {/* Testo */}
                                             <Card.Body>
-                                                <Card.Title style={{  fontFamily:"'Playfair Display', serif;" }}>{card.title}</Card.Title>
-                                                <Card.Text style={{  }}>
+                                                <Card.Title style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</Card.Title>
+                                                <Card.Text>
                                                     {card.text}
                                                 </Card.Text>
                                                 <Link to="/Regolamento">
-                                                    <Button className='Button' variant="outline-danger" >Iscriviti</Button>
+                                                    <Button className='Button' variant="outline-danger">Iscriviti</Button>
                                                 </Link>
                                             </Card.Body>
                                         </div>
@@ -46,6 +48,8 @@ class About extends React.Component {
                             </div>
                         ))}
                     </div>
+
+
                 </div>
             </div>
         );

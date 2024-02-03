@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -31,26 +32,27 @@ function Login() {
     };
 
     return (
-           <div><h1 className='login-title'>Login</h1>
-        <div className="login-container">
-           
-            <Form className="login" onSubmit={handleLogin}>
-                <Form.Group className="mb-3" controlId="formGroupEmail">
-                    <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formGroupPassword">
-                    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </Form.Group>
-                
+        <div><h1 className='login-title'>Login</h1>
+            <div className="login-container">
+
+                <Form className="login" onSubmit={handleLogin}>
+                    <Form.Group className="mb-3" controlId="formGroupEmail">
+                        <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formGroupPassword">
+                        <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </Form.Group>
+
                     <Button className='Button' variant="outline-danger" type="submit">
-                    Login
-                </Button>
-                
+                        Login
+                    </Button>
+                </Form>
 
-            </Form>
-           </div>
+            </div>
+                <p>Non sei registrato? <Link to="/registrazione">Registrati</Link></p>
         </div>
-    );
-}
-
-export default Login;
+                
+                );
+            }
+            
+            export default Login;

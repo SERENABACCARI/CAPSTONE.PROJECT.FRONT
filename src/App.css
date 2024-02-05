@@ -161,6 +161,7 @@ p{
 .containerGare {
   display: flex;
   flex-direction: column;
+  margin-top: 10rem;
   
 }
 
@@ -191,7 +192,7 @@ p{
 
 .card-title {
   font-family: 'Playfair Display', serif;
-  font-size: xx-large;
+  font-size: xxx-large;
   color: rgb(220, 210, 210);
   margin-top: 7rem;
 }
@@ -199,7 +200,7 @@ p{
 .card-text{
   font-family: 'Farsan', cursive;
   font-family: 'Handlee', cursive;
-  font-size: large;
+  font-size: x-large;
   color: rgb(220, 210, 210);
 }
 
@@ -244,7 +245,18 @@ p{
   background-color:transparent;
   border-color: transparent;
   font-family: 'Playfair Display', serif;
-  font-size: larger;
+  font-size: x-large;
 
     
+}
+
+
+/*PAGINA REGISTRER*/
+
+.Register-container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin-top: 3rem
 }

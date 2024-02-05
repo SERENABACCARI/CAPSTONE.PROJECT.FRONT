@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
-
-function Login() {
+function Registrazione() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate();
+    const [confirmPassword, setConfirmPassword] = useState("");
+     const navigate = useNavigate(); 
 
-    const handleLogin = async (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
-        /* debugger*/
 
-        const response = await fetch(`http://localhost:3020/api/users/login`, {
+        const response = await fetch(`http://localhost:3020/api/users/Registrer`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
+                name,
                 email,
                 password,
             }),
         });
+
+        
 
         const data = await response.json();
         if (data.token) {
@@ -28,31 +32,33 @@ function Login() {
             localStorage.setItem('token', data.token);
         }
 
-        navigate('/mainLogin');
+        navigate('/mainRegistrer');
     };
 
     return (
-        <div><h1 className='login-title'>Login</h1>
-            <div className="login-container">
-
-                <Form className="login" onSubmit={handleLogin}>
+        <div>
+            <h1 style={{ marginTop: '15rem' }}>Registrer</h1>
+            <div className="Register-container">
+                <Form className="Register" onSubmit={handleRegister}>
+                    <Form.Group className="mb-3" controlId="formGroupName">
+                        <Form.Control type="text" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)} />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
                         <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupPassword">
                         <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </Form.Group>
-
+                    <Form.Group className="mb-3" controlId="formGroupConfirmPassword">
+                        <Form.Control type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                    </Form.Group>
                     <Button className='Button' variant="outline-danger" type="submit">
-                        Login
+                        Register
                     </Button>
                 </Form>
-
             </div>
-                <p>Non sei registrato? <Link to="/Registrazione">Registrati</Link></p>
         </div>
-                
-                );
-            }
-            
-            export default Login;
+    );
+}
+
+export default Registrazione;

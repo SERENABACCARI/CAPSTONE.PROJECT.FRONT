@@ -17,7 +17,7 @@ import MainRegistrer from "../src/component/mainRegistrer.jsx"
 /*import express from "express";
 
 const server = express();
-const port = 3030;
+const port = 3020;
 
 server.use(express.json());
 

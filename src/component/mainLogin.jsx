@@ -14,7 +14,7 @@ export default function Main() {
         if (!userId || !token) {
             navigate('/login');
         } else {
-            fetch(`http://localhost:3020/api/users/${userId}`, {
+            fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -30,9 +30,9 @@ export default function Main() {
     }, [navigate]);
 
     return !user ? (
-        
+
         <span>LOADING....</span>
     ) : (
-            <div style={{  marginTop: "20rem" }}><h1>Congratulazioni! Accesso avvenuto con successo!</h1> {user.email}</div>
+        <div style={{ marginTop: "20rem" }}><h1>Congratulazioni! Accesso avvenuto con successo!</h1> {user.email}</div>
     );
 }

@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
         /* debugger*/
 
-        const response = await fetch(`http://localhost:3020/api/users/login`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -49,10 +49,10 @@ function Login() {
                 </Form>
 
             </div>
-                <p>Non sei registrato? <Link to="/Registrazione">Registrati</Link></p>
+            <p>Non sei registrato? <Link to="/Registrazione">Registrati</Link></p>
         </div>
-                
-                );
-            }
-            
-            export default Login;
+
+    );
+}
+
+export default Login;

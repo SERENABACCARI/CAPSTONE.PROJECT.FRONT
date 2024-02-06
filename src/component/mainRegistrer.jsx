@@ -12,7 +12,7 @@ export default function Main() {
         if (!userId || !token) {
             navigate('/Registrazione');
         } else {
-            fetch(`http://localhost:3020/api/users/${userId}`, {
+            fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -27,7 +27,7 @@ export default function Main() {
         }
     }, [navigate]);
 
-    
+
 
     return !user ? (
         <span>LOADING....</span>
@@ -37,4 +37,4 @@ export default function Main() {
             <p>Email: {user.email}</p>
         </div>
     );
-    }
+}

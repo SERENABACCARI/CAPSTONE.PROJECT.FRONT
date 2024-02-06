@@ -9,12 +9,12 @@ function Registrazione() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-     const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`http://localhost:3020/api/users/Registrer`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/Registrer`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -24,7 +24,7 @@ function Registrazione() {
             }),
         });
 
-        
+
 
         const data = await response.json();
         if (data.token) {

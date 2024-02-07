@@ -14,7 +14,7 @@ function Registrazione() {
     const handleRegister = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/Registrer`, {
+        const response = await fetch(`https://capstone-project-jaja.onrender.com/api/users/Registrer`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
         /* debugger*/
 
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_ENDPOINT}/api/users/login`, {
+        const response = await fetch(`https://capstone-project-jaja.onrender.com/api/users/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
